@@ -1,5 +1,9 @@
 # Project Setup: VS Code + Jupyter Extension
 
+> **⚠️ DISCLAIMER**
+>
+> This repository contains security lab exercises for **educational purposes only**. Some labs demonstrate potentially harmful techniques (keyloggers, phishing, brute-force attacks) to teach defensive security concepts. **Do not use any code from this repository for malicious purposes.** Unauthorized access to computer systems is illegal. The authors are not responsible for any misuse of this material. Use responsibly and only in controlled environments with proper authorization.
+
 This guide shows how to install the Jupyter extension in VS Code and set up the Python environment and requirements for these labs on macOS.
 
 ## Requirements
