@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web App with API</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #1a1a2e;
+        color: #eee;
+      }
+      .container {
+        background: #16213e;
+        padding: 30px;
+        border-radius: 10px;
+      }
+      h1 {
+        color: #e94560;
+      }
+      button {
+        background: #e94560;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button:hover {
+        background: #ff6b6b;
+      }
+      .output {
+        background: #0f0f23;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        font-family: monospace;
+        white-space: pre-wrap;
+        min-height: 100px;
+      }
+      .info {
+        background: #1f4068;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🚀 NGINX + FastAPI Demo</h1>
+      <p>Frontend served by NGINX, API calls proxied to FastAPI backend</p>
+
+      <div class="info">
+        <strong>Configuration:</strong> <code>03-api-with-frontend.conf</code> |
+        <strong>Port:</strong> 8003 | <strong>Backend:</strong> FastAPI on 5000
+      </div>
+
+      <h3>Test API Endpoints:</h3>
+      <button onclick="fetchAPI('/')">GET /</button>
+      <button onclick="fetchAPI('/api/health')">GET /api/health</button>
+      <button onclick="fetchAPI('/api/users')">GET /api/users</button>
+      <button onclick="fetchAPI('/api/users/1')">GET /api/users/1</button>
+
+      <div class="output" id="output">Click a button to test the API...</div>
+
+      <h3>How it works:</h3>
+      <ul>
+        <li>
+          Static files (this HTML) served from <code>/var/www/html/webapp</code>
+        </li>
+        <li>
+          API requests (<code>/api/*</code>) proxied to
+          <code>http://127.0.0.1:5000</code>
+        </li>
+        <li>Single domain, no CORS issues!</li>
+      </ul>
+    </div>
+
+    <script>
+      async function fetchAPI(endpoint) {
+        const output = document.getElementById("output");
+        output.textContent = "Loading...";
+        try {
+          const response = await fetch(endpoint);
+          const data = await response.json();
+          output.textContent = JSON.stringify(data, null, 2);
+        } catch (error) {
+          output.textContent = "Error: " + error.message;
+        }
+      }
+    </script>
+  </body>
+</html>
