@@ -5,10 +5,10 @@ import smtplib
 # Email server details (for example, Gmail's SMTP)
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
-sender_email = "nurssafranbolu@gmail.com"  # Replace with your email address
-sender_password = "170200LN@"     # Replace with your email password or app-specific password
-receiver_email = "nurstunguch@gmail.com"  # Replace with the recipient's email
-app_password = "ukgc gini zmty bzfq"
+sender_email = "nurssafranbolu@gmail.com"
+sender_password = "my_password"     # Replace with your email password or app-specific password
+receiver_email = "nurstunguch@gmail.com"
+app_password = "my_app_password"  # Replace with your app-specific password if using Gmail
 
 # HTML email content
 subject = "Daily report"
