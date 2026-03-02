@@ -1,8 +1,11 @@
 # Information Security Lab Sessions
 
-I am fully conversant with the AUCA syllabus requirements and policies. I accept complete accountability for meeting all course deadlines and deliverables. Nursultan Lukmanov
+**Course:** Information Security (COM-424.1)   
+**University:** American University of Central Asia (AUCA)  
+**Semester:** Spring 2026  
+**Student:** Nursultan Lukmanov (ID: 14467)
 
-**Course:** Information Security (COM-424.1) | **University:** American University of Central Asia (AUCA) | **Semester:** Spring 2026 **Student:** Nursultan Lukmanov ID: 14467
+I am fully conversant with the AUCA syllabus requirements and policies. I accept complete accountability for meeting all course deadlines and deliverables. Nursultan Lukmanov
 
 ## About This Repository
 
