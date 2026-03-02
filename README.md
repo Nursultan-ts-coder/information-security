@@ -1,52 +1,69 @@
-# Project Setup: VS Code + Jupyter Extension
+# Information Security Lab Sessions
 
-> **⚠️ DISCLAIMER**
->
-> This repository contains security lab exercises for **educational purposes only**. Some labs demonstrate potentially harmful techniques (keyloggers, phishing, brute-force attacks) to teach defensive security concepts. **Do not use any code from this repository for malicious purposes.** Unauthorized access to computer systems is illegal. The authors are not responsible for any misuse of this material. Use responsibly and only in controlled environments with proper authorization.
+**Course:** Information Security (COM-424.1) | **University:** American University of Central Asia (AUCA) | **Semester:** Spring 2026 **Student:** Nursultan Lukmanov ID: 14467
 
-This guide shows how to install the Jupyter extension in VS Code and set up the Python environment and requirements for these labs on macOS.
+## About This Repository
 
-## Requirements
+This repository contains hands-on security labs covering 13 different topics, from basic terminal commands to advanced attacks like keylogging and phishing. All work is **for educational purposes only**.
 
-- VS Code (latest)
+> **⚠️ DISCLAIMER:** This repository contains security lab exercises for **educational purposes only**. Some labs demonstrate potentially harmful techniques to teach defensive security concepts. **Do not use any code for malicious purposes.** Unauthorized access is illegal. Use responsibly and only in authorized environments.
+
+## Lab Overview
+
+| Lab | Topic                             | Key Files                        |
+| --- | --------------------------------- | -------------------------------- |
+| 1   | Basic Commands & Terminal         | `basic-commands.ipynb`           |
+| 2   | Shell Scripting & File Management | `task-*.ipynb`                   |
+| 3   | Python Shell Implementation       | `toy_shell.py`                   |
+| 4   | Phishing & Social Engineering     | `mail.py`, HTML templates        |
+| 5   | User Management                   | `user-management.ipynb`          |
+| 6   | File Permissions & Security       | `file-permissions.ipynb`         |
+| 7   | Process Scheduling (Cron)         | `crontab.ipynb`                  |
+| 8   | Vim Text Editor                   | `vim-essentials.ipynb`           |
+| 9   | Package Management                | `index.md`                       |
+| 10  | Nginx & Web Configuration         | `nginx-configs/`, `main.py`      |
+| 11  | Package Installation from Source  | Installation scripts             |
+| 12  | Brute-Force Testing               | `brute-force-server/main.py`     |
+| 13  | Keylogging & Data Exfiltration    | `keylogger/main.py`, `server.py` |
+
+## Setup Instructions
+
+### Prerequisites
+
 - Python 3.x
-- VS Code extensions: Python (Microsoft) and Jupyter (Microsoft)
-- A Python virtual environment is provided at `jupyter-env/`
-- Project dependencies listed in `requirements.txt`
+- VS Code (optional, for Jupyter notebooks)
+- Jupyter or Jupyter Lab
 
-## Install VS Code Extensions
-
-- Open VS Code → Extensions (left sidebar).
-- Search and install:
-  - Python — Publisher: Microsoft
-  - Jupyter — Publisher: Microsoft
-- Optional CLI (if `code` command is available):
+### Quick Start
 
 ```bash
-code --install-extension ms-python.python
-code --install-extension ms-toolsai.jupyter
-```
-
-## Configure Python Environment
-
-Use the provided virtual environment to ensure consistent packages and kernels.
-
-```bash
-# From the repository root
+# Activate the virtual environment
 source jupyter-env/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Open Jupyter Lab or Jupyter Notebook
+jupyter lab
 ```
 
-### If `jupyter-env/` does not exist (gitignored)
-
-Create a new Python virtual environment named `jupyter-env` and install dependencies:
+### If Virtual Environment Doesn't Exist
 
 ```bash
-# From the repository root
+# Create a new virtual environment
 python3 -m venv jupyter-env
 source jupyter-env/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
+
+## Viewing the Labs
+
+- **Jupyter Notebooks:** Open `.ipynb` files in Jupyter Lab or VS Code with Jupyter extension
+- **Python Scripts:** Run with `python filename.py`
+- **Configuration Files:** View and configure as needed
+- **Documentation:** Read `index.md` files in each lab folder for detailed information
 
 Then, in VS Code, select the interpreter at `jupyter-env/bin/python` via the Command Palette → “Python: Select Interpreter”. The Jupyter extension will detect this environment as a kernel for notebooks.
 
