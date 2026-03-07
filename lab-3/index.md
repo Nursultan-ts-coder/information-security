@@ -6,12 +6,6 @@ This lab contains a single notebook with shell-based tasks. Run it directly in V
 
 - `task.ipynb` — the notebook with step-by-step tasks
 
-## Prerequisites
-
-- Python 3.x
-- VS Code with the Python and Jupyter extensions installed
-- A Python virtual environment (see root README for creating `jupyter-env`)
-
 ## Quick Start (VS Code)
 
 1. Open the folder `labs/lab-3/` in VS Code.
